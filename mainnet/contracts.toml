@@ -1,0 +1,14 @@
+[contracts]
+
+[contracts.code_ids.neutron]
+# Registry is not used and only needed on neutron
+valence_program_registry     = 3234
+valence_authorization        = 3225
+valence_processor            = 3226
+valence_base_account         = 3227
+valence_forwarder            = 3228
+valence_splitter             = 3229
+valence_reverse_splitter     = 3230
+valence_drop_liquid_staker   = 3231
+valence_astroport_lper       = 3232
+valence_astroport_withdrawer = 3233
