@@ -8,3 +8,12 @@ prefix    = "neutron"
 gas_price = "0.0053"
 gas_denom = "untrn"
 coin_type = "118"
+
+[chains.juno]
+name = "juno"
+rpc  = "https://juno-rpc.polkachu.com"
+grpc = "https://juno-grpc.polkachu.com:12690"
+prefix    = "juno"
+gas_price = "0.075"
+gas_denom = "ujuno"
+coin_type = "118"

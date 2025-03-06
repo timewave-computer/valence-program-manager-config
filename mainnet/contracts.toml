@@ -10,6 +10,14 @@ valence_forwarder_library        = 3228
 valence_splitter_library         = 3229
 valence_reverse_splitter_library = 3230
 valence_drop_liquid_staker       = 3231
+valence_drop_liquid_unstaker     = 3255
 valence_astroport_lper           = 3232
 valence_astroport_withdrawer     = 3233
-valence_drop_liquid_unstaker     = 3255
+
+[contracts.code_ids.juno]
+valence_processor                    = 4780
+valence_base_account                 = 4781
+valence_forwarder_library            = 4782
+valence_splitter_library             = 4783
+valence_reverse_splitter_library     = 4784
+valence_generic_ibc_transfer_library = 4785
