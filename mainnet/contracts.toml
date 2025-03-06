@@ -3,6 +3,7 @@
 [contracts.code_ids.neutron]
 # Registry is not used and only needed on neutron
 valence_program_registry         = 3234
+polytone_proxy                   = 3261
 valence_authorization            = 3225
 valence_processor                = 3226
 valence_base_account             = 3227
@@ -22,4 +23,3 @@ valence_forwarder_library            = 4782
 valence_splitter_library             = 4783
 valence_reverse_splitter_library     = 4784
 valence_generic_ibc_transfer_library = 4785
-
