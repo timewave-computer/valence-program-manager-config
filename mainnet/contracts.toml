@@ -23,3 +23,12 @@ valence_forwarder_library            = 4782
 valence_splitter_library             = 4783
 valence_reverse_splitter_library     = 4784
 valence_generic_ibc_transfer_library = 4785
+
+[contracts.code_ids.terra]
+polytone_proxy                       = 2372
+valence_processor                    = 3552
+valence_base_account                 = 3554
+valence_forwarder_library            = 3555
+valence_splitter_library             = 3556
+valence_reverse_splitter_library     = 3557
+valence_generic_ibc_transfer_library = 3558

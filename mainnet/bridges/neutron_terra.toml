@@ -1,0 +1,12 @@
+[bridges.neutron.terra.polytone.neutron]
+voice_addr      = "neutron1dsxy6h7cfnrguqe09ym599wk09a9zpyzw6r6yttrkquqffp06l6sfptpfp"
+note_addr       = "neutron143aydj5zcgh7fudhsjq7878z7v8dmj0ckn9un2hsrxgnslvgymfsln0tkw"
+other_note_port = "wasm.terra1eumwktcszm8p5p3apuxq4mrk008rx8sakntq68a5x6l6my33jl2qfvsfge"
+connection_id   = "connection-9"
+channel_id      = "channel-53"
+[bridges.neutron.terra.polytone.terra]
+voice_addr      = "terra1669p39l9gg4ajjwyta5psf5g4aen05d392mzp9efpa06vnaa7j6s3czzd3"
+note_addr       = "terra1eumwktcszm8p5p3apuxq4mrk008rx8sakntq68a5x6l6my33jl2qfvsfge"
+other_note_port = "wasm.neutron143aydj5zcgh7fudhsjq7878z7v8dmj0ckn9un2hsrxgnslvgymfsln0tkw"
+connection_id   = "connection-192"
+channel_id      = "channel-388"
