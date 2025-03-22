@@ -2,19 +2,18 @@
 
 [contracts.code_ids.neutron]
 # Registry is not used and only needed on neutron
-valence_program_registry             = 3234
 polytone_proxy                       = 231
-valence_authorization                = 3225
-valence_processor                    = 3226
-valence_base_account                 = 3227
-valence_forwarder_library            = 3228
-valence_splitter_library             = 3229
-valence_reverse_splitter_library     = 3230
-valence_drop_liquid_staker           = 3231
-valence_drop_liquid_unstaker         = 3255
-valence_astroport_lper               = 3232
-valence_astroport_withdrawer         = 3233
-valence_neutron_ibc_transfer_library = 3288
+valence_astroport_lper               = 3297
+valence_astroport_withdrawer         = 3298
+valence_authorization                = 3299
+valence_base_account                 = 3300
+valence_forwarder_library            = 3301
+valence_generic_ibc_transfer_library = 3306
+valence_neutron_ibc_transfer_library = 3307
+valence_processor                    = 3302
+valence_program_registry             = 3303
+valence_reverse_splitter_library     = 3304
+valence_splitter_library             = 3305
 
 [contracts.code_ids.juno]
 polytone_proxy                       = 3321
