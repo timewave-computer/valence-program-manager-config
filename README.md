@@ -21,3 +21,16 @@ In order to operate on multiple chains we need a GMP bridge to exists, the bridg
 This is general information that is needed by the manager.
 
 - registry_addr - The address of the registry contract to keep track of program configs
+
+# Deploy contracts with nix
+
+There is a script created by zero.nix for each chain that will automatically upload contracts and dump information about each contract in the file <chain>-contracts.yaml.
+
+Configuration for each chain and contracts on them is in the [flake.nix](flake.nix).
+
+Run `nix run .#<chain>-upload-contracts`. For example to upload neutron contracts run the following:
+
+``` bash
+nix run .#neutron-upload-contracts
+```
+
