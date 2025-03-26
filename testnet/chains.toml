@@ -1,0 +1,11 @@
+[chains]
+
+[chains.neutron]
+chain_id = "pion-1"
+name = "neutron"
+rpc  = "https://rpc-falcron.pion-1.ntrn.tech"
+grpc = "https://grpc-falcron.pion-1.ntrn.tech:80"
+prefix    = "neutron"
+gas_price = "0.0053"
+gas_denom = "untrn"
+coin_type = "118"
