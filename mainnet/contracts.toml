@@ -33,3 +33,5 @@ valence_forwarder_library            = 3555
 valence_splitter_library             = 3556
 valence_reverse_splitter_library     = 3557
 valence_generic_ibc_transfer_library = 3558
+valence_astroport_lper               = 3560
+valence_astroport_withdrawer         = 3561
