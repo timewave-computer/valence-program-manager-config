@@ -51,6 +51,7 @@
             cosmosNixPkgs = inputs'.cosmos-nix.packages;
             getChainConfig = network: (builtins.fromTOML (builtins.readFile ./${network}/chains.toml)).chains;
             mainnetChainConfig = getChainConfig "mainnet";
+            testnetChainConfig = getChainConfig "testnet";
             mainContracts = [ "valence_drop_liquid_staker" "valence_drop_liquid_unstaker" ];
             valenceContracts = { config, ... }: {
               contractDefaults = { name, ... }: {
@@ -88,6 +89,7 @@
           in
           {
             networks.mainnet.data-dir = "./mainnet/contracts-data";
+            networks.mainnet.chainDefaults = valenceContracts;
             networks.mainnet.chains = {
               neutron = {
                 package = cosmosNixPkgs.neutron;
@@ -111,7 +113,18 @@
                 max-fees = "6000000";
               };
             };
-            networks.mainnet.chainDefaults = valenceContracts;
+            networks.testnet.data-dir = "./testnet/contracts-data";
+            networks.testnet.chainDefaults = valenceContracts;
+            networks.testnet.chains = {
+              neutron = {
+                package = cosmosNixPkgs.neutron;
+                node-address = testnetChainConfig.neutron.rpc;
+                denom = testnetChainConfig.neutron.gas_denom;
+                chain-id = testnetChainConfig.neutron.chain_id;
+                max-fees = "1000000";
+              };
+            };
+
           };
       };
     };
