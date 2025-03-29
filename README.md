@@ -31,22 +31,29 @@ There are scripts created by zero.nix to automatically store contracts and dump 
 Run `nix run .#<network>-<chain>-upload-contracts`. For example, to upload neutron mainnet contracts run the following:
 
 ``` bash
-nix run .#mainnet-neutron-upload-contracts --admin-address <admin-address>
+nix run .#mainnet-neutron-upload-contracts -- --admin-address <admin-address>
 ```
-
-To output the code ids of the neutron contracts in the expected format for the program manager, run:
-``` bash
-nix run .#print-contracts-toml mainnet/contracts-data/neutron.yaml
-```
+Code ids will be printed out at the end in the expected toml format for the program manager.
 
 ## Uploading a network of chains
 
 To upload all contracts for every chain in a network use:
 
 ``` bash
-nix run .#mainnet-upload-contracts
+nix run .#mainnet-upload-contracts -- --admin-address <admin-key-name>
 ```
 This script will create `contracts.toml` for the whole network in `mainnet/contracts-data/contracts.toml`.
+
+The uploading process doesn't yet support command line arguments per chain, so when uploading a network of chains it is recommended to have addresses with the same key name for all chains and then pass the key name as the admin address.
+
+If it is necessary to specify different admin addresses per chain, then it must be set in [flake.nix][flake] with the `admin-address` key. To override the mainnet neutron admin-address, for example, go to the "networks.mainnet.chains" section of [flake.nix][flake], then set admin-address like so:
+
+``` nix
+networks.mainnet.chains = {
+  neutron = {
+    admin-address = "neutron1...";
+    package = cosmosNixPkgs.neutron;
+```
 
 ## Customizing contract uploads
 
@@ -65,3 +72,18 @@ As an example, to upload neutron contracts with a different rpc, run:
 nix run .#mainnet-neutron-upload-contracts --admin-address <admin-address> --node-address <rpc url>
 ```
 
+## Manually print code ids
+A script is available to print the code ids of any collection of chains. To do so, run:
+
+``` bash
+nix run .#print-contracts-toml <chain yaml files>
+```
+The chain yaml files are the ones living in the contracts-data folder created by the upload scripts.
+
+For example, to print the contracts.toml just neutron and juno on mainnet, run:
+
+``` bash
+nix run .#print-contracts-toml mainnet/contracts-data/neutron.yaml mainnet/contracts-data/juno.yaml 
+```
+
+[flake]: flake.nix
