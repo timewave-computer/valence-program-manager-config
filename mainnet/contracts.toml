@@ -3,36 +3,42 @@
 [contracts.code_ids.neutron]
 # Registry is not used and only needed on neutron
 polytone_proxy                       = 231
-valence_astroport_lper               = 3297
-valence_astroport_withdrawer         = 3298
-valence_authorization                = 3299
-valence_base_account                 = 3300
-valence_drop_liquid_staker           = 3310
-valence_drop_liquid_unstaker         = 3311
-valence_forwarder_library            = 3301
-valence_generic_ibc_transfer_library = 3306
-valence_neutron_ibc_transfer_library = 3307
-valence_processor                    = 3302
-valence_program_registry             = 3303
-valence_reverse_splitter_library     = 3304
-valence_splitter_library             = 3305
+valence_astroport_lper               = 3316
+valence_astroport_withdrawer         = 3317
+valence_authorization                = 3318
+valence_base_account                 = 3319
+valence_drop_liquid_staker           = 3320
+valence_drop_liquid_unstaker         = 3321
+valence_forwarder_library            = 3322
+valence_generic_ibc_transfer_library = 3323
+valence_neutron_ibc_transfer_library = 3324
+valence_processor                    = 3325
+valence_program_registry             = 3326
+valence_reverse_splitter_library     = 3327
+valence_splitter_library             = 3328
 
 [contracts.code_ids.juno]
 polytone_proxy                       = 3321
-valence_processor                    = 4780
-valence_base_account                 = 4781
-valence_forwarder_library            = 4782
-valence_splitter_library             = 4783
-valence_reverse_splitter_library     = 4784
-valence_generic_ibc_transfer_library = 4785
+valence_astroport_lper               = 4801
+valence_astroport_withdrawer         = 4802
+valence_base_account                 = 4803
+valence_drop_liquid_staker           = 4804
+valence_drop_liquid_unstaker         = 4805
+valence_forwarder_library            = 4806
+valence_generic_ibc_transfer_library = 4810
+valence_processor                    = 4807
+valence_reverse_splitter_library     = 4808
+valence_splitter_library             = 4809
 
 [contracts.code_ids.terra]
 polytone_proxy                       = 2372
-valence_processor                    = 3552
-valence_base_account                 = 3554
-valence_forwarder_library            = 3555
-valence_splitter_library             = 3556
-valence_reverse_splitter_library     = 3557
-valence_generic_ibc_transfer_library = 3558
-valence_astroport_lper               = 3560
-valence_astroport_withdrawer         = 3561
+valence_astroport_lper               = 3571
+valence_astroport_withdrawer         = 3572
+valence_base_account                 = 3573
+valence_drop_liquid_staker           = 3574
+valence_drop_liquid_unstaker         = 3575
+valence_forwarder_library            = 3576
+valence_generic_ibc_transfer_library = 3580
+valence_processor                    = 3577
+valence_reverse_splitter_library     = 3578
+valence_splitter_library             = 3579
