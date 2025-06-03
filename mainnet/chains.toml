@@ -29,3 +29,13 @@ prefix    = "terra"
 gas_price = "0.015"
 gas_denom = "uluna"
 coin_type = "330"
+
+[chains.osmosis]
+chain_id = "osmosis-1"
+name = "osmosis"
+rpc  = "https://osmosis-rpc.polkachu.com:443"
+grpc = "https://osmosis-grpc.polkachu.com:11790"
+prefix    = "osmo"
+gas_price = "0.015"
+gas_denom = "uosmo"
+coin_type = "118"
