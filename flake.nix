@@ -38,35 +38,25 @@
       }: let
         zeroNixPkgs = inputs'.zero-nix.packages;
       in {
-        valence-contracts.upload = false;
+        valence-contracts.upload = true;
         upload-contracts = {
           network-defaults = {name, ...}: {
             data-dir = "./${name}/contracts-data";
             program-manager-chains-toml = ./${name}/chains.toml;
             chain-defaults = {
               contract-defaults = {
-                # Only use valence-contracts-main for contracts in list above
+                # Use contracts from release by default
                 package = lib.mkDefault zeroNixPkgs.valence-contracts-v0_1_2;
-              };
-              contracts = {
-                # valence_drop_liquid_staker.package = zeroNixPkgs.valence-contracts-main;
-                #valence_drop_liquid_unstaker.package = zeroNixPkgs.valence-contracts-main;
-                valence_splitter_library.package = zeroNixPkgs.valence-contracts-v0_1_2;
-                valence_reverse_splitter_library.package = zeroNixPkgs.valence-contracts-v0_1_2;
-                valence_base_account.package = zeroNixPkgs.valence-contracts-v0_1_2;
-                valence_forwarder_library.package = zeroNixPkgs.valence-contracts-v0_1_2;
-                valence_processor.package = zeroNixPkgs.valence-contracts-v0_1_2;
-                valence_generic_ibc_transfer_library.package = zeroNixPkgs.valence-contracts-v0_1_2;
-                valence_osmosis_cl_lper.package = zeroNixPkgs.valence-contracts-v0_1_2;
-                valence_osmosis_cl_withdrawer.package = zeroNixPkgs.valence-contracts-v0_1_2;
-                valence_osmosis_gamm_lper.package = zeroNixPkgs.valence-contracts-v0_1_2;
-                valence_osmosis_gamm_withdrawer.package = zeroNixPkgs.valence-contracts-v0_1_2;
               };
             };
           };
           networks.mainnet.chains = {
             neutron = {
               max-fees = "1000000";
+              contracts = {
+                valence_drop_liquid_staker.package = zeroNixPkgs.valence-contracts-main;
+                valence_drop_liquid_unstaker.package = zeroNixPkgs.valence-contracts-main;
+              };
             };
             juno = {
               max-fees = "1000000";
@@ -76,6 +66,10 @@
             };
             osmosis = {
               max-fees = "1000000";
+              contracts = {
+                valence_astroport_lper.enable = false;
+                valence_astroport_withdrawer.enable = false;
+              };
             };
           };
           networks.testnet.chains = {
