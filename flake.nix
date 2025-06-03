@@ -30,7 +30,7 @@
       perSystem = { lib, config, inputs', ... }:
         let zeroNixPkgs = inputs'.zero-nix.packages; in
           {
-            valence-contracts.upload = true;
+            valence-contracts.upload = false;
             upload-contracts = {
               network-defaults = { name, ... }: {
                 data-dir = "./${name}/contracts-data";
@@ -41,8 +41,18 @@
                     package = lib.mkDefault zeroNixPkgs.valence-contracts-v0_1_2;
                   };
                   contracts = {
-                    valence_drop_liquid_staker.package = zeroNixPkgs.valence-contracts-main;
-                    valence_drop_liquid_unstaker.package = zeroNixPkgs.valence-contracts-main;
+                    # valence_drop_liquid_staker.package = zeroNixPkgs.valence-contracts-main;
+                    #valence_drop_liquid_unstaker.package = zeroNixPkgs.valence-contracts-main;
+                    valence_splitter_library.package = zeroNixPkgs.valence-contracts-v0_1_2;
+                    valence_reverse_splitter_library.package = zeroNixPkgs.valence-contracts-v0_1_2;
+                    valence_base_account.package = zeroNixPkgs.valence-contracts-v0_1_2;
+                    valence_forwarder_library.package = zeroNixPkgs.valence-contracts-v0_1_2;
+                    valence_processor.package = zeroNixPkgs.valence-contracts-v0_1_2; 
+                    valence_generic_ibc_transfer_library.package = zeroNixPkgs.valence-contracts-v0_1_2;
+                    valence_osmosis_cl_lper.package = zeroNixPkgs.valence-contracts-v0_1_2;
+                    valence_osmosis_cl_withdrawer.package = zeroNixPkgs.valence-contracts-v0_1_2;
+                    valence_osmosis_gamm_lper.package = zeroNixPkgs.valence-contracts-v0_1_2;
+                    valence_osmosis_gamm_withdrawer.package = zeroNixPkgs.valence-contracts-v0_1_2;
                   };
                 };
               };
@@ -55,6 +65,9 @@
                 };
                 terra = {
                   max-fees = "6000000";
+                };
+                osmosis = {
+                  max-fees = "1000000";
                 };
               };
               networks.testnet.chains = {
