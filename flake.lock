@@ -2032,11 +2032,11 @@
     "valence-contracts-main": {
       "flake": false,
       "locked": {
-        "lastModified": 1743118505,
-        "narHash": "sha256-EMy3NNv7naemwcEI7fN1+kAaZQLxudRaOLBTM1iP9Cc=",
+        "lastModified": 1748888666,
+        "narHash": "sha256-u4ggiVVO1+lOsxN86TVXSfuMP5MCWoJuiyg352g2h2I=",
         "owner": "timewave-computer",
         "repo": "valence-protocol",
-        "rev": "9a37fe1dc2feafb5283879915bf8597776ffb443",
+        "rev": "91bb2e27311a36b85564ea2d4f50b95242297c14",
         "type": "github"
       },
       "original": {
@@ -2407,11 +2407,11 @@
         "valence-contracts-v0_1_2": "valence-contracts-v0_1_2"
       },
       "locked": {
-        "lastModified": 1745301944,
-        "narHash": "sha256-JcqC6ok0reUXXhB/eWc+UKpH5h22SeNhLUN4MfrpJyc=",
+        "lastModified": 1748991622,
+        "narHash": "sha256-OOfA0jaQpEsKmnGgVrfYKNSfnPdnDdY+9Ew9mCohubo=",
         "owner": "timewave-computer",
         "repo": "zero.nix",
-        "rev": "7b8ab9d28c8200308ff1314a406f98c14433d3b6",
+        "rev": "4335f1f0d43e0d4c5d12ab4065fef1ad10dcda7e",
         "type": "github"
       },
       "original": {
