@@ -69,6 +69,7 @@
               contracts = {
                 valence_astroport_lper.enable = false;
                 valence_astroport_withdrawer.enable = false;
+                valence_mars_lending.package = zeroNixPkgs.valence-contracts-main;
               };
             };
           };
