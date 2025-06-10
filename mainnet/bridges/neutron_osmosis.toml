@@ -1,0 +1,12 @@
+[bridges.neutron.osmosis.polytone.neutron]
+voice_addr      = "neutron14wfsdrpp9fhdfeh3wnfedz0jeeguxgz2jh5kk335zc9ghjac7mzs88tfau"
+note_addr       = "neutron1767kfqeglqyctuqsmvyzgjecs60lpqju2f590smxevk9duq5fhaqgk5eca"
+other_note_port = "wasm.osmo10j4qku3lzsqayyq6uhta4pzkv4fc97w3em9mjaxtvmv84y0fcats96lv89"
+connection_id   = "connection-18"
+channel_id      = "channel-54"
+[bridges.neutron.osmosis.polytone.osmosis]
+voice_addr      = "osmo1vw02frqejfw2v2w7dy6ws35jp9743dwkxy0laalwsuvzzvkszz7s8d93yw"
+note_addr       = "osmo10j4qku3lzsqayyq6uhta4pzkv4fc97w3em9mjaxtvmv84y0fcats96lv89"
+other_note_port = "wasm.neutron1767kfqeglqyctuqsmvyzgjecs60lpqju2f590smxevk9duq5fhaqgk5eca"
+connection_id   = "connection-2338"
+channel_id      = "channel-13103"
