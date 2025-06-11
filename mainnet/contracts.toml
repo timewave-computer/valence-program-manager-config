@@ -42,3 +42,18 @@ valence_generic_ibc_transfer_library = 3580
 valence_processor                    = 3577
 valence_reverse_splitter_library     = 3578
 valence_splitter_library             = 3579
+
+
+[contracts.code_ids.osmosis]
+polytone_proxy = 127
+valence_mars_lending = 1619
+valence_splitter_library = 1620
+valence_base_account = 1621
+valence_forwarder_library = 1622
+valence_generic_ibc_transfer_library = 1623
+valence_osmosis_cl_lper = 1624
+valence_osmosis_cl_withdrawer = 1625
+valence_osmosis_gamm_lper = 1626
+valence_osmosis_gamm_withdrawer = 1627
+valence_processor = 1628
+valence_reverse_splitter_library = 1629
